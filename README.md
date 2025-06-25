@@ -38,8 +38,8 @@ The `bettercap_auto.sh` script will attempt to install Bettercap if it's not fou
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    https://github.com/darkbert781/Air-Audit.git
+    cd Air-Audit
     ```
 
 2.  **Create and activate a Python virtual environment:**
