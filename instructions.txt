@@ -14,8 +14,8 @@ Before you begin, make sure you have the following installed on your Linux syste
 
 1. Clone the Repository:
    Open a terminal and navigate to the directory where you want to store the project, then run:
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   https://github.com/darkbert781/Air-Audit.git
+   cd Air-Audit
 
 2. Create a Python Virtual Environment:
    This keeps the project's dependencies isolated.
