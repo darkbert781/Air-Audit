@@ -1,0 +1,57 @@
+Wi-Fi Traffic Analyzer - Setup and Usage Instructions
+
+== Prerequisites ==
+
+Before you begin, make sure you have the following installed on your Linux system:
+- Python 3
+- Bettercap
+- Aircrack-ng suite (specifically `airodump-ng`)
+- `arp-scan`
+- `gnome-terminal` (required for the automated launch feature)
+
+
+== Installation & Setup ==
+
+1. Clone the Repository:
+   Open a terminal and navigate to the directory where you want to store the project, then run:
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+
+2. Create a Python Virtual Environment:
+   This keeps the project's dependencies isolated.
+   python3 -m venv venv
+
+3. Activate the Virtual Environment:
+   source venv/bin/activate
+
+4. Install Required Python Packages:
+   pip install -r requirements.txt
+
+5. Configure Your Whitelist (Optional):
+   Edit the `whitelist.json` file to add the MAC addresses of your own trusted devices. This helps the "Real-time LAN Monitor" (Option 1) identify potentially unauthorized devices.
+
+   Example `whitelist.json`:
+   {
+     "authorized_macs": [
+       "AA:BB:CC:DD:EE:FF",
+       "11:22:33:44:55:66"
+     ]
+   }
+
+
+== How to Run the Tool ==
+
+1. Start the Main Application:
+   Make sure your virtual environment is still active. If not, reactivate it with `source venv/bin/activate`.
+   Then, run the main script:
+   python3 wifi_monitor.py
+
+2. Select an Option from the Menu:
+   - For the full, automated analysis, choose Option 3: "Live Security Analyzer".
+   - This will open two new terminal windows:
+     1. The Bettercap Engine: It may ask for your sudo password to start monitoring.
+     2. The Python Analyst: It will start displaying live traffic data after a 15-second delay.
+
+3. Stop the Analysis:
+   - To stop the process, go to the analyst's terminal window (the one showing the live traffic) and press `Ctrl+C`.
+   - A final report will be generated in the console and saved to `reports.json`.
